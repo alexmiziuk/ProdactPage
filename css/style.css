@@ -1,0 +1,65 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+/* 300 */
+@font-face {
+	font-family: "SFProText-Light";
+	src: url("../assets/Fonts/SanFranciscoProText/SFProText-Light.ttf") format("truetype"); /* Обычная версия шрифта */
+	font-style: normal;
+}
+/* 400 */
+@font-face {
+	font-family: "SFProText-Regular";
+	src: url("../assets/Fonts/SanFranciscoProText/SFProText-Regular.ttf") format("truetype"); /* Обычная версия шрифта */
+	font-style: normal;
+}
+/* 700 */
+@font-face {
+	font-family: "SFProText-Semibold";
+	src: url("../assets/Fonts/SanFranciscoProText/SFProText-Semibold.ttf") format("truetype"); /* Обычная версия шрифта */
+	font-style: normal;
+}
+.container {
+	margin: 0 auto;
+	max-width: 1333px;
+}
+.product-page {
+padding: 32px 0 252px 0;
+}
+.nav__breadcrumb {
+	display: flex;
+	font-family: SFProText-Regular;
+	align-items: center;
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 100%;
+	text-transform: uppercase;
+	list-style-type: none;
+}
+.nav__breadcrumb-item {
+	display: inline-block;
+}
+.nav__breadcrumb-item:not(:last-child)::after {
+	content: "";
+	width: 16px;
+	height: 16px;
+	background-image: url("../assets/Icons/Icons_Arrow_right_long.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	margin: 0 5px 2px 5px;
+	display: inline-block;
+	vertical-align: middle;
+}
+.nav__breadcrumb-item-link {
+	text-decoration: none;
+}
+.nav__breadcrumb-item-link--dark {
+	color: rgb(4, 42, 48);
+}
+.nav__breadcrumb-item-link--medium {
+	color: rgb(105, 112, 113);
+}
+.nav__breadcrumb-item-link--light {
+	color: rgb(163, 163, 163);
+}
