@@ -14,16 +14,28 @@
 	src: url("../assets/Fonts/SanFranciscoProText/SFProText-Regular.ttf") format("truetype");
 	font-style: normal;
 }
-/* SFProText 700 */
+/* SFProText 600 */
 @font-face {
 	font-family: "SFProText-Semibold";
 	src: url("../assets/Fonts/SanFranciscoProText/SFProText-Semibold.ttf") format("truetype");
+	font-style: normal;
+}
+/* SFProText 700 */
+@font-face {
+	font-family: "SFProText-Bold";
+	src: url("../assets/Fonts/SanFranciscoProText/SFProText-Bold.ttf") format("truetype");
 	font-style: normal;
 }
 /* OpenSans 400 */
 @font-face {
 	font-family: "OpenSans-Regular";
 	src: url("../assets/Fonts/OpenSans/OpenSans-Regular.ttf") format("truetype");
+	font-style: normal;
+}
+/* Montserrat-Bold 700 */
+@font-face {
+	font-family: "Montserrat-Bold";
+	src: url("../assets/Fonts/Montserrat/Montserrat-Bold.ttf") format("truetype");
 	font-style: normal;
 }
 
@@ -69,6 +81,11 @@
 .nav__breadcrumb-item-link--light {
 	color: rgb(163, 163, 163);
 }
+.product__grid-container {
+	display: grid;
+	grid-template-columns: 652px 664px;
+	gap: 0 44px;
+}
 .product__slider-wrapper {
 	position: relative;
 	margin-top: 48px;
@@ -110,7 +127,6 @@
 	font-family: SFProText-Regular;
 	font-size: 10px;
 	line-height: 100%;
-	letter-spacing: 0%;
 	left: 16px;
 	bottom: 16px;
 }
@@ -141,20 +157,28 @@
 	position: relative;
 }
 .product__preview-container {
-	overflow: hidden;
-	width: 580px;
-	margin: 16px auto 0 auto;
+	overflow: visible;
+	max-width: 116px;
+	margin: 16px 0 0 40px;
 }
 .product__preview-window {
-	overflow: visible;
+	overflow: hidden;
+	width: 583px;
 }
 .product__preview-slider-line {
 	display: flex;
+	flex-wrap: wrap;
 }
 .product__preview-slide {
-	width: 108px;
+	width: 116px;
+	flex-shrink: 0;
+	cursor: pointer;
+}
+.product__preview-img {
+	display: block;
+
 	height: 72px;
-	margin: 0 4px;
+	margin: 0 auto;
 }
 .product__slider-button-prev--left {
 	position: absolute;
@@ -167,4 +191,61 @@
 	right: 8px;
 	top: 50%;
 	transform: translateY(-50%);
+}
+.product__info-title {
+	font-family: "Montserrat-Bold";
+	color: rgb(4, 42, 48);
+	font-size: 40px;
+	margin-top: 48px;
+}
+.product__info-item {
+	color: rgb(41, 46, 47);
+	font-family: "SFProText-Semibold";
+	font-size: 14px;
+	margin-top: 43px;
+}
+.product__info-belt-container {
+	display: flex;
+	justify-content: space-between;
+	align-content: space-between;
+	margin-top: 11px;
+	flex-wrap: wrap;
+	width: 287px;
+	height: 80px;
+}
+.product__info-belt-width {
+	padding: 11px 14px 11px 14px;
+	width: 48px;
+	height: 34px;
+	border: none;
+	border-radius: 8px;
+	font-family: "SFProText-Bold";
+	font-size: 14px;
+	cursor: pointer;
+	background: rgb(214,225,229);
+}
+
+.product__info-belt-width--linear-gradient {
+	background: linear-gradient(to right, rgb(214,225,229) 50%, transparent 50%);
+}
+
+.product__info-belt-width--active {
+	background: rgb(20, 107, 135);
+	color: rgb(255, 255, 255);
+	line-height: 0;
+}
+.product__info-custom-btn {
+	font-family: "SFProText-Bold";
+	font-size: 14px;
+	width: 108px;
+	height: 34px;
+	padding: 11px 16px 11px 16px;
+	color: rgb(41, 46, 47);
+	text-transform: uppercase;
+	background: linear-gradient(to right, rgb(214,225,229) 20px, white 20px, white calc(100% - 45px), rgb(214,225,229) calc(100% - 45px));
+	line-height: 0;
+	border-radius: 8px;
+	border: none;
+	cursor: pointer;
+	
 }
