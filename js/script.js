@@ -109,13 +109,13 @@ imagesPreview.forEach((item, index) => {
 
 let startX, currentX, isDragging = false;
 
-sliderLine.addEventListener('touchstart', touchStart);
-sliderLine.addEventListener('touchmove', touchMove);
-sliderLine.addEventListener('touchend', touchEnd);
+sliderLine.addEventListener('touchstart', touchStart, { passive: true });
+sliderLine.addEventListener('touchmove', touchMove, { passive: true });
+sliderLine.addEventListener('touchend', touchEnd, { passive: true });
 
-sliderLinePreview.addEventListener('touchstart', touchStart);
-sliderLinePreview.addEventListener('touchmove', touchMove);
-sliderLinePreview.addEventListener('touchend', touchEnd);
+sliderLinePreview.addEventListener('touchstart', touchStart, { passive: true });
+sliderLinePreview.addEventListener('touchmove', touchMove, { passive: true });
+sliderLinePreview.addEventListener('touchend', touchEnd, { passive: true });
 
 function touchStart(event) {
 	startX = event.touches[0].clientX;
@@ -126,19 +126,18 @@ function touchMove(event) {
 	if (!isDragging) return;
 	currentX = event.touches[0].clientX;
 	const diff = startX - currentX;
-	
-	const widthValue = widthPreview; // Используем ширину превью слайдера
-	
-	if (Math.abs(diff) > 20) {
-		 event.preventDefault();
-		 
-		 const translate = -countPreview * widthValue + diff; // Используем countPreview для слайдера превью
-		 sliderLinePreview.style.transition = 'none'; // Отключаем анимацию для превью слайдера
-		 sliderLinePreview.style.transform = `translate(${translate}px)`;
 
-		 const translateMain = -count * width + diff; // Используем count для основного слайдера
-		 sliderLine.style.transition = 'none'; // Отключаем анимацию для основного слайдера
-		 sliderLine.style.transform = `translate(${translateMain}px)`;
+	const widthValue = widthPreview; // Use the slider preview width
+	if (Math.abs(diff) > 20) {
+		event.preventDefault();
+
+		const translate = -countPreview * widthValue + diff; // Use countPreview for the preview slider
+		sliderLinePreview.style.transition = 'none'; // Disable animation for slider previews
+		sliderLinePreview.style.transform = `translate(${translate}px)`;
+
+		const translateMain = -count * width + diff; // Use count for the main slider
+		sliderLine.style.transition = 'none'; // Disable animation for the main slider
+		sliderLine.style.transform = `translate(${translateMain}px)`;
 	}
 }
 
@@ -170,6 +169,145 @@ function touchEnd() {
 	rollSlider();
 	rollSliderPreview();
 }
+
+// pallets-slider
+
+function setupPalletsSlider() {
+	const imagesPallets = document.querySelectorAll('.product__info-pallets-slide');
+	const sliderLinePallets = document.querySelector('.product__info-pallets-slider-line');
+	let countPallets = 0;
+	let widthPallets;
+
+	function initPallets() {
+		 console.log('resize');
+		 widthPallets = document.querySelector('.product__info-pallets-slider').offsetWidth;
+		 sliderLinePallets.style.width = widthPallets * imagesPallets.length + 'px';
+		 imagesPallets.forEach(item => {
+			  item.style.width = widthPallets + 'px';
+			  item.style.height = '44px';
+		 });
+		 rollSliderPallets();
+	}
+
+	function rollSliderPallets() {
+		 sliderLinePallets.style.transform = 'translate(-' + countPallets * widthPallets + 'px)';
+	}
+
+	initPallets();
+	window.addEventListener('resize', initPallets);
+
+	document.querySelector('.product__info-pallets-next').addEventListener('click', function () {
+		 countPallets++;
+		 if (countPallets >= imagesPallets.length) {
+			  countPallets = 0;
+		 }
+		 rollSliderPallets();
+	});
+
+	document.querySelector('.product__info-pallets-prev').addEventListener('click', function () {
+		 countPallets--;
+		 if (countPallets < 0) {
+			  countPallets = imagesPallets.length - 1;
+		 }
+		 rollSliderPallets();
+	});
+}
+
+// Call the function to set the slider
+setupPalletsSlider();
+
+
+//button product__info-custom-btn
+
+function setupInfoCustomButton() {
+	const infoCustomBtn = document.querySelector('.product__info-custom-btn');
+	const palletsWrapper = document.querySelector('.product__info-pallets-wrapper');
+	
+	// Check if the block is hidden. If not, hide it
+	if (!palletsWrapper.classList.contains('product__info-pallets-wrapper--hidden')) {
+		 palletsWrapper.classList.add('product__info-pallets-wrapper--hidden');
+	}
+	
+	// Add event handler for the button click event
+	infoCustomBtn.addEventListener('click', function () {
+		 // Toggle visibility class based on button click
+		 if (palletsWrapper.classList.contains('product__info-pallets-wrapper--hidden')) {
+			  palletsWrapper.classList.remove('product__info-pallets-wrapper--hidden');
+			  palletsWrapper.classList.add('product__info-pallets-wrapper--visible');
+			  infoCustomBtn.classList.add('product__info-belt-width--active');
+		 } else {
+			  palletsWrapper.classList.remove('product__info-pallets-wrapper--visible');
+			  palletsWrapper.classList.add('product__info-pallets-wrapper--hidden');
+			  infoCustomBtn.classList.remove('product__info-belt-width--active');
+		 }
+	});
+}
+
+// Call the function to customize the button
+setupInfoCustomButton();
+
+// slider bedSectionLength
+function setupBedSlider() {
+	const imagesBedSectionLength = document.querySelectorAll('.product__info-bed-slide');
+	const sliderLineBed = document.querySelector('.product__info-bed-slider-line');
+	const beltButtons = document.querySelectorAll('.product__info-belt-width');
+	let countBed = 0;
+	let widthBed;
+
+	function initBed() {
+		 console.log('resize');
+		 widthBed = document.querySelector('.product__info-bed-slider').offsetWidth;
+		 sliderLineBed.style.width = widthBed * imagesBedSectionLength.length + 'px';
+		 imagesBedSectionLength.forEach(item => {
+			  item.style.width = widthBed + 'px';
+			  item.style.height = '44px';
+		 });
+		 rollSliderBed();
+	}
+
+	function setActiveButton(index) {
+		 beltButtons.forEach(button => {
+			  button.classList.remove('product__info-belt-width--active');
+		 });
+		 beltButtons[index].classList.add('product__info-belt-width--active');
+	}
+
+	function rollSliderBed() {
+		 sliderLineBed.style.transform = 'translate(-' + countBed * widthBed + 'px)';
+	}
+
+	initBed();
+	window.addEventListener('resize', initBed);
+
+	document.querySelector('.product__info-bed-next').addEventListener('click', function () {
+		 countBed++;
+		 if (countBed >= imagesBedSectionLength.length) {
+			  countBed = 0;
+		 }
+		 rollSliderBed();
+		 setActiveButton(countBed);
+	});
+
+	document.querySelector('.product__info-bed-prev').addEventListener('click', function () {
+		 countBed--;
+		 if (countBed < 0) {
+			  countBed = imagesBedSectionLength.length - 1;
+		 }
+		 rollSliderBed();
+		 setActiveButton(countBed);
+	});
+
+	beltButtons.forEach((button, index) => {
+		 button.addEventListener('click', function () {
+			  countBed = index;
+			  rollSliderBed();
+			  setActiveButton(countBed);
+		 });
+	});
+}
+setupBedSlider();
+
+
 
 
 
