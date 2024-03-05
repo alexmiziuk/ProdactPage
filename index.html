@@ -1,202 +1,323 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- normalize.min.css -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-	<!-- fonts -->
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link
-		href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:wght@300;400;500;700&display=swap"
-		rel="stylesheet">
 	<link rel="stylesheet" href="./css/style.css">
 	<title>Product Page</title>
 </head>
 
 <body>
-	<section class="product-page">
-		<nav aria-label="nav">
-			<div class="container">
-				<ul class="nav__breadcrumb">
-					<li class="nav__breadcrumb-item">
-						<a class="nav__breadcrumb-item-link nav__breadcrumb-item-link--dark" href="#">home</a>
-					</li>
-					<li class="nav__breadcrumb-item">
-						<a class="nav__breadcrumb-item-link nav__breadcrumb-item-link--medium" href="#">conveyors</a>
-					</li>
-					<li class="nav__breadcrumb-item">
-						<a class="nav__breadcrumb-item-link nav__breadcrumb-item-link--light" href="#">incline & decline
-							conveyors</a>
-					</li>
-				</ul>
+	<nav class="nav">
+		<div class="container">
+			<ul class="nav__breadcrumb">
+				<li class="nav__breadcrumb-item">
+					<a class="nav__breadcrumb-item-link nav__breadcrumb-item-link--dark" href="#">home</a>
+				</li>
+				<li class="nav__breadcrumb-item">
+					<a class="nav__breadcrumb-item-link nav__breadcrumb-item-link--medium" href="#">conveyors</a>
+				</li>
+				<li class="nav__breadcrumb-item">
+					<a class="nav__breadcrumb-item-link nav__breadcrumb-item-link--light" href="#">incline & decline
+						conveyors</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<main class="product">
+		<div class="container">
+			<h1 class="product__info-title-for-mobile">
+				Incline & Decline Conveyors
+			</h1>
+			<div class="product__grid-container">
+				<section class="product__visualization">
+					<div class="product__slider-wrapper">
+						<div class="product__slider-pagination">
+							<span class="product__current-slide">1</span>/<span class="product__total-slides">6</span>
+						</div>
+						<button class="product__btn-full-screen"></button>
+						<div class="product__slider-window">
+							<div class="product__slider-line">
+								<img class="product__slider-slide" src="./assets/Img/big-slider/Conveyor-3d-Temp0025.png"
+									alt="Conveyor for a home">
+								<img class="product__slider-slide" src="./assets/Img/big-slider/Conveyor-3d-second.png"
+									alt="Conveyor for a home">
+								<img class="product__slider-slide" src="./assets/Img/big-slider/Conveyor-3d-third.png"
+									alt="Conveyor for a home">
+								<img class="product__slider-slide" src="./assets/Img/big-slider/Conveyor-3d-forth.png"
+									alt="Conveyor for a home">
+								<img class="product__slider-slide" src="./assets/Img/big-slider/Conveyor-3d-fifth.png"
+									alt="Conveyor for a home">
+							</div>
+						</div>
+						<div class="product__slider-button-wrapper">
+							<button class="product__slider-button-prev"></button>
+							<button class="product__slider-button-next"></button>
+						</div>
+						<p class="product__slider-item">Picture shows conveyor with optional structures amd features</p>
+					</div>
+					<div class="product__preview">
+						<div class="product__preview-container">
+							<div class="product__preview-window">
+								<div class="product__preview-slider-line">
+									<div class="product__preview-slide">
+										<img class="product__preview-img" src="./assets/Img/small-slider/Pictures-1.png"
+											alt="Preview conveyor for a home">
+									</div>
+									<div class="product__preview-slide">
+										<img class="product__preview-img" src="./assets/Img/small-slider/Pictures-2.png"
+											alt="Preview conveyor for a home">
+									</div>
+									<div class="product__preview-slide">
+										<img class="product__preview-img" src="./assets/Img/small-slider/Pictures-3.png"
+											alt="Preview conveyor for a home">
+									</div>
+									<div class="product__preview-slide">
+										<img class="product__preview-img" src="./assets/Img/small-slider/Pictures-4.png"
+											alt="Preview conveyor for a home">
+									</div>
+									<div class="product__preview-slide">
+										<img class="product__preview-img" src="./assets/Img/small-slider/Pictures-5.png"
+											alt="Preview conveyor for a home">
+									</div>
+									<div class="product__preview-slide">
+										<img class="product__preview-img" src="./assets/Img/small-slider/Pictures-1.png"
+											alt="Preview conveyor for a home">
+									</div>
+									<div class="product__preview-slide">
+										<img class="product__preview-img" src="./assets/Img/small-slider/Pictures-2.png"
+											alt="Preview conveyor for a home">
+									</div>
+									<div class="product__preview-slide">
+										<img class="product__preview-img" src="./assets/Img/small-slider/Pictures-3.png"
+											alt="Preview conveyor for a home">
+									</div>
+									<div class="product__preview-slide">
+										<img class="product__preview-img" src="./assets/Img/small-slider/Pictures-4.png"
+											alt="Preview conveyor for a home">
+									</div>
+									<div class="product__preview-slide">
+										<img class="product__preview-img" src="./assets/Img/small-slider/Pictures-5.png"
+											alt="Preview conveyor for a home">
+									</div>
+								</div>
+							</div>
+						</div>
+						<button class="product__slider-button-prev product__slider-button-prev--left"></button>
+						<button class="product__slider-button-next product__slider-button-next--right"></button>
+					</div>
+				</section>
+				<section class="product__info">
+					<h1 class="product__info-title">
+						Incline & Decline Conveyors
+					</h1>
+					<div class="product__info-wrapper">
+						<section class="product__info-specifications">
+							<div class="product__info-box">
+								<h2 class="product__info-item">Conveyor Belt Width, in</h2>
+								<div class="product__info-item-icon"></div>
+								<div class="product__info-roller-text">
+									Flexible gravity roller conveyors are ideal for maneuvering into places that are not
+									suited for conventional conveyor systems.
+								</div>
+							</div>
+							<div class="product__info-belt-container">
+								<button class="product__info-belt-width product__info-belt-width--active">10”</button>
+								<button class="product__info-belt-width product__info-belt-width--linear-gradient">18”</button>
+								<button class="product__info-belt-width">24”</button>
+								<button class="product__info-belt-width product__info-belt-width--linear-gradient">30”</button>
+								<button class="product__info-belt-width">36”</button>
+								<button class="product__info-belt-width">42”</button>
+								<button class="product__info-belt-width product__info-belt-width--linear-gradient">48”</button>
+								<button class="product__info-belt-width">54”</button>
+								<button class="product__info-custom-btn">custom</button>
+							</div>
+							<div class="product__info-pallets-wrapper">
+								<button class="product__info-pallets-prev product__info-pallets-prev--left"></button>
+								<div class="product__info-pallets-slider">
+									<div class="product__info-pallets-slider-line">
+										<div class="product__info-pallets-slide">1"</div>
+										<div class="product__info-pallets-slide">2"</div>
+										<div class="product__info-pallets-slide">3"</div>
+										<div class="product__info-pallets-slide">4"</div>
+										<div class="product__info-pallets-slide">5"</div>
+									</div>
+								</div>
+								<button class="product__info-pallets-next product__info-pallets-next--right"></button>
+							</div>
+							<div class="product__info-box product__info-box-second">
+								<h2 class="product__info-item">Bed Section Length, in</h2>
+								<div class="product__info-item-icon"></div>
+								<div class="product__info-roller-text">
+									Flexible gravity roller conveyors are ideal for maneuvering into places that are not
+									suited for conventional conveyor systems.
+								</div>
+							</div>
+							<div class="product__info-bed-wrapper">
+								<button class="product__info-bed-prev product__info-bed-prev--left"></button>
+								<div class="product__info-bed-slider">
+									<div class="product__info-bed-slider-line">
+										<div class="product__info-bed-slide">10"</div>
+										<div class="product__info-bed-slide">18"</div>
+										<div class="product__info-bed-slide">24"</div>
+										<div class="product__info-bed-slide">30"</div>
+										<div class="product__info-bed-slide">36"</div>
+										<div class="product__info-bed-slide">42"</div>
+										<div class="product__info-bed-slide">48"</div>
+										<div class="product__info-bed-slide">54"</div>
+									</div>
+								</div>
+								<button class="product__info-bed-next product__info-bed-prev--right"></button>
+							</div>
+
+							<div class="product__info-box product__info-box-third">
+								<h2 class="product__info-item">Additional options</h2>
+								<div class="product__info-item-icon"></div>
+								<div class="product__info-roller-text product__info-roller-text-center">
+									Flexible gravity roller conveyors are ideal for maneuvering into places that are not
+									suited for conventional conveyor systems.
+								</div>
+							</div>
+
+							<button class="product__info-select-options">
+								<div class="product__info-select-options-item">Select options</div>
+								<span class="product__info-select-options-btn"></span>
+							</button>
+
+							<ul class="product__info-options-wrapper">
+								<li class="product__info-options-box">
+
+									<label class=" product__info-options-checkbox"> <!-- custom-checkbox -->
+										<input type="checkbox">
+										<span class="checkbox-label"></span>
+									 </label>
+									
+									 <!-- <input class="product__info-options-checkbox" type="checkbox" id="checkbox-options-first"> -->
+									<p class="product__info-options-item">Chain Driven Feeder</p>
+									<div class="product__info-item-icon product__info-item-icon--static"></div>
+									<div class="product__info-roller-text product__info-roller-text--centered-relative">
+										Flexible gravity roller conveyors are ideal for maneuvering into places that are not
+										suited for conventional conveyor systems.
+									</div>
+								</li>
+								<li class="product__info-options-box">
+									<label class=" product__info-options-checkbox"> <!-- custom-checkbox -->
+										<input type="checkbox">
+										<span class="checkbox-label"></span>
+									 </label>
+									<!-- <input class="product__info-options-checkbox" type="checkbox" id="checkbox-options-second"> -->
+									<p class="product__info-options-item">Additional Support Structures</p>
+									<div class="product__info-item-icon product__info-item-icon--static"></div>
+									<div class="product__info-roller-text product__info-roller-text--centered-relative">
+										Flexible gravity roller conveyors are ideal for maneuvering into places that are not
+										suited for conventional conveyor systems.
+									</div>
+								</li>
+								<li class="product__info-options-box">
+									<label class=" product__info-options-checkbox"> <!-- custom-checkbox -->
+										<input type="checkbox">
+										<span class="checkbox-label"></span>
+									 </label>
+									<!-- <input class="product__info-options-checkbox" type="checkbox" id="checkbox-options-third"> -->
+									<p class="product__info-options-item">Knee Braces</p>
+									<div class="product__info-item-icon product__info-item-icon--static"></div>
+									<div class="product__info-roller-text product__info-roller-text--centered-relative">
+										Flexible gravity roller conveyors are ideal for maneuvering into places that are not
+										suited for conventional conveyor systems.
+									</div>
+								</li>
+								<li class="product__info-options-box">
+									<label class=" product__info-options-checkbox"> <!-- custom-checkbox -->
+										<input type="checkbox">
+										<span class="checkbox-label"></span>
+									 </label>
+									<!-- <input class="product__info-options-checkbox" type="checkbox" id="checkbox-options-fourth"> -->
+									<p class="product__info-options-item">Enhanced support</p>
+									<div class="product__info-item-icon product__info-item-icon--static"></div>
+									<div class="product__info-roller-text product__info-roller-text--centered-relative">
+										Flexible gravity roller conveyors are ideal for maneuvering into places that are not
+										suited for conventional conveyor systems.
+									</div>
+								</li>
+							</ul>
+						</section>
+						<section class="product__info-details">
+							<div class="product__info-details-block-one">
+								<div class="product__info-details-labeling">
+									SKU: <span>WMD-2446F-GRYI</span>
+								</div>
+								<div class="product__info-details-group">
+									<button class="product__info-details-upon-btn">
+										<span class="product__info-details-upon-btn-name">
+											Upon request
+										</span>
+									</button>
+									<div class="product__info-details-box">
+										<div class="product__info-details-stars">
+											<img src="./assets/Icons/star.png" alt="icon star" class="product__info-details-star">
+											<img src="./assets/Icons/star.png" alt="icon star" class="product__info-details-star">
+											<img src="./assets/Icons/star.png" alt="icon star" class="product__info-details-star">
+											<img src="./assets/Icons/star.png" alt="icon star" class="product__info-details-star">
+											<img src="./assets/Icons/star.png" alt="icon star" class="product__info-details-star">
+											<div class="product__info-details-numbers">
+												(20)
+											</div>
+										</div>
+										<button class="product__info-details-btn-read">
+											<span>read</span>
+										</button>
+									</div>
+								</div>
+							</div>
+							<div class="product__info-details-lines">
+								<span class="product__info-details-line"></span>
+								<span class="product__info-details-line"></span>
+								<span class="product__info-details-line"></span>
+							</div>
+							<div class="product__info-details-block-one">
+								<div class="product__info-details-price">
+									from
+									<span class="product__info-details-price-usd">$22360</span>
+									<span class='product__info-details-price-ea'>ea </span>
+									<span class="product__info-details-price-snowflake">*</span>
+								</div>
+								<div class="product__info-details-consultation-specialist-doubler">
+									<span>*</span>Final price is defined after a consultation with our specialist due to
+									actual conditions of use.
+								</div>
+								<div class="product__info-details-quantity-goods">
+									<button class="product__info-details-btn-subtract">
+										<img src="./assets/Icons/minus-icon.png" alt="image minus"
+											class="product__info-details-img-min">
+									</button>
+									<div class="product__info-details-quantity-window">
+										<div class="product__info-details-counter">1</div>
+									</div>
+									<button class="product__info-details-btn-add">
+										<img src="./assets/Icons/plus-icon.png" alt="image plus"
+											class="product__info-details-img-plus">
+									</button>
+								</div>
+								<button class="product__info-details-main-request">
+									<span>request</span>
+								</button>
+								<p class="product__info-details-consultation-specialist">
+									<span>*</span>Final price is defined after a consultation with our specialist due to
+									actual conditions of use.
+								</p>
+							</div>
+						</section>
+					</div>
+				</section>
 			</div>
-		</nav>
-		<main class="product">
-			<div class="container">
-				<div class="product__grid-container">
-					<section class="product__visualization">
-						<div class="product__slider-wrapper">
-							<div class="product__slider-pagination">
-								<span class="product__current-slide">1</span>/<span class="product__total-slides">6</span>
-							</div>
-							<button class="product__btn-full-screen"></button>
-							<div class="product__slider-window">
-								<div class="product__slider-line">
-									<img class="product__slider-slide" src="./assets/Img/big-slider/Conveyor-3d-Temp0025.png"
-										alt="Conveyor for a home">
-									<img class="product__slider-slide" src="./assets/Img/big-slider/Conveyor-3d-second.png"
-										alt="Conveyor for a home">
-									<img class="product__slider-slide" src="./assets/Img/big-slider/Conveyor-3d-third.png"
-										alt="Conveyor for a home">
-									<img class="product__slider-slide" src="./assets/Img/big-slider/Conveyor-3d-forth.png"
-										alt="Conveyor for a home">
-									<img class="product__slider-slide" src="./assets/Img/big-slider/Conveyor-3d-fifth.png"
-										alt="Conveyor for a home">
-								</div>
-							</div>
-							<div class="product__slider-button-wrapper">
-								<button class="product__slider-button-prev"></button>
-								<button class="product__slider-button-next"></button>
-							</div>
-							<p class="product__slider-item">Picture shows conveyor with optional structures amd features</p>
-						</div>
-						<div class="product__preview">
-							<div class="product__preview-container">
-								<div class="product__preview-window">
-									<div class="product__preview-slider-line">
-										<div class="product__preview-slide">
-											<img class="product__preview-img" src="./assets/Img/small-slider/Pictures-1.png"
-												alt="Preview conveyor for a home">
-										</div>
-										<div class="product__preview-slide">
-											<img class="product__preview-img" src="./assets/Img/small-slider/Pictures-2.png"
-												alt="Preview conveyor for a home">
-										</div>
-										<div class="product__preview-slide">
-											<img class="product__preview-img" src="./assets/Img/small-slider/Pictures-3.png"
-												alt="Preview conveyor for a home">
-										</div>
-										<div class="product__preview-slide">
-											<img class="product__preview-img" src="./assets/Img/small-slider/Pictures-4.png"
-												alt="Preview conveyor for a home">
-										</div>
-										<div class="product__preview-slide">
-											<img class="product__preview-img" src="./assets/Img/small-slider/Pictures-5.png"
-												alt="Preview conveyor for a home">
-										</div>
-										<div class="product__preview-slide">
-											<img class="product__preview-img" src="./assets/Img/small-slider/Pictures-1.png"
-												alt="Preview conveyor for a home">
-										</div>
-										<div class="product__preview-slide">
-											<img class="product__preview-img" src="./assets/Img/small-slider/Pictures-2.png"
-												alt="Preview conveyor for a home">
-										</div>
-										<div class="product__preview-slide">
-											<img class="product__preview-img" src="./assets/Img/small-slider/Pictures-3.png"
-												alt="Preview conveyor for a home">
-										</div>
-										<div class="product__preview-slide">
-											<img class="product__preview-img" src="./assets/Img/small-slider/Pictures-4.png"
-												alt="Preview conveyor for a home">
-										</div>
-										<div class="product__preview-slide">
-											<img class="product__preview-img" src="./assets/Img/small-slider/Pictures-5.png"
-												alt="Preview conveyor for a home">
-										</div>
-									</div>
-								</div>
-							</div>
-							<button class="product__slider-button-prev product__slider-button-prev--left"></button>
-							<button class="product__slider-button-next product__slider-button-next--right"></button>
-						</div>
-					</section>
-					<section class="product__info">
-						<h1 class="product__info-title">
-							Incline & Decline Conveyors
-						</h1>
-						<div class="product__info-wrapper">
-							<section class="product__info-specifications">
-								<div class="product__info-box">
-									<h2 class="product__info-item">Conveyor Belt Width, in</h2>
-									<div class="product__info-item-icon"></div>
-									<div class="product__info-roller-text">
-										Flexible gravity roller conveyors are ideal for maneuvering into places that are not
-										suited for conventional conveyor systems.
-									</div>
-								</div>
-								<div class="product__info-belt-container">
-									<button class="product__info-belt-width product__info-belt-width--active">10”</button>
-									<button
-										class="product__info-belt-width product__info-belt-width--linear-gradient">18”</button>
-									<button class="product__info-belt-width">24”</button>
-									<button
-										class="product__info-belt-width product__info-belt-width--linear-gradient">30”</button>
-									<button class="product__info-belt-width">36”</button>
-									<button class="product__info-belt-width">42”</button>
-									<button
-										class="product__info-belt-width product__info-belt-width--linear-gradient">48”</button>
-									<button class="product__info-belt-width">54”</button>
-									<button class="product__info-custom-btn">custom</button>
-								</div>
-								<div class="product__info-pallets-wrapper">
-									<button class="product__info-pallets-prev product__info-pallets-prev--left"></button>
-									<div class="product__info-pallets-slider">
-										<div class="product__info-pallets-slider-line">
-											<div class="product__info-pallets-slide">1"</div>
-											<div class="product__info-pallets-slide">2"</div>
-											<div class="product__info-pallets-slide">3"</div>
-											<div class="product__info-pallets-slide">4"</div>
-											<div class="product__info-pallets-slide">5"</div>
-										</div>
-									</div>
-									<button class="product__info-pallets-next product__info-pallets-next--right"></button>
-								</div>
-								<div class="product__info-box product__info-box-second">
-									<h2 class="product__info-item">Bed Section Length, in</h2>
-									<div class="product__info-item-icon"></div>
-									<div class="product__info-roller-text">
-										Flexible gravity roller conveyors are ideal for maneuvering into places that are not
-										suited for conventional conveyor systems.
-									</div>
-								</div>
-
-								<div class="product__info-bed-wrapper">
-									<button class="product__info-bed-prev product__info-bed-prev--left"></button>
-									<div class="product__info-bed-slider">
-										<div class="product__info-bed-slider-line">
-											<div class="product__info-bed-slide">10"</div>
-											<div class="product__info-bed-slide">18"</div>
-											<div class="product__info-bed-slide">24"</div>
-											<div class="product__info-bed-slide">30"</div>
-											<div class="product__info-bed-slide">36"</div>
-											<div class="product__info-bed-slide">42"</div>
-											<div class="product__info-bed-slide">48"</div>
-											<div class="product__info-bed-slide">54"</div>
-										</div>
-									</div>
-									<button class="product__info-bed-next product__info-bed-prev--right"></button>
-								</div>
-
-						</div>
-
-					</section>
-
-					<section class="product__info-details">
-
-					</section>
-
-				</div>
+		</div>
 
 
-
-	</section>
-	</div>
-	</div>
+		 
 	</main>
-	</section>
 	<script src="./js/script.js"></script>
 </body>
 
