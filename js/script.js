@@ -344,6 +344,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	}
 
 	// Calling a function to enable an event handler
+	
 	toggleOptionsVisibility();
 	const checkbox = document.querySelector('.product__info-options-checkbox input[type="checkbox"]');
 	checkbox.addEventListener('change', function () {
@@ -372,7 +373,3 @@ document.addEventListener("DOMContentLoaded", function () {
 		});
 	});
 });
-
-
-
-
