@@ -164,6 +164,7 @@
 .product__info-bed-next {
 	background-size: contain;
 	background-repeat: no-repeat;
+	background-color: white;
 	width: 16px;
 	height: 16px;
 	border: none;
@@ -320,15 +321,15 @@
 	font-family: "SFProText-Bold";
 	font-size: 14px;
 	cursor: pointer;
-	background: rgb(214, 225, 229);
+	background: rgb(224, 236, 240);
 	transition: 0.3s all ease-in-out;
 }
 .product__info-belt-width:hover {
 	background: rgb(63, 180, 215);
 }
-.product__info-belt-width--linear-gradient {
+/* .product__info-belt-width--linear-gradient {
 	background: linear-gradient(to right, rgb(214, 225, 229) 50%, transparent 50%);
-}
+} */
 .product__info-custom-btn {
 	font-family: "SFProText-Bold";
 	font-size: 14px;
@@ -378,7 +379,7 @@
 }
 .product__info-pallets-slider,
 .product__info-bed-slider {
-	max-width: 64px;
+	width: 64px;
 	overflow: hidden;
 	border-top: 1px solid rgb(205, 211, 211);
 	border-bottom: 1px solid rgb(205, 211, 211);
@@ -419,7 +420,7 @@
 	justify-content: space-between;
 }
 .product__info-bed-slider {
-	max-width: 74px;
+	width: 74px;
 }
 .product__info-bed-slider-line {
 	display: flex;
@@ -935,6 +936,15 @@
 		font-size: 32px;
 		line-height: 32px;
 	}
+	.product__info-belt-container {
+		width: 262px;
+		height: 108px;
+	}
+	.product__info-belt-width {
+		width: 44px;
+		height: 46px;
+		padding: 11px 9px 11px 11px;
+	}
 	.product__info-wrapper {
 		flex-wrap: wrap;
 	}
@@ -954,6 +964,20 @@
 		height: 32px;
 		border-radius: 4px;
 	}
+	.product__info-bed-wrapper {
+		width: 320px;
+	}
+	.product__info-bed-slider {
+		width: 192px;
+		background: rgb(242, 245, 245);
+	}
+	.product__info-bed-slider div {
+		background: rgb(242, 245, 245);
+	}
+	.product__info-bed-slide {
+		background: rgb(242, 245, 245);
+	}
+	
 	.product__info-details-box {
 		box-sizing: border-box;
 		width: 183px;
