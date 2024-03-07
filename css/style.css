@@ -65,7 +65,7 @@
 	background-image: url("../assets/Icons/Icons_Arrow_right_long.png");
 	background-size: contain;
 	background-repeat: no-repeat;
-	margin: 0 5px 2px 5px;
+	margin: 0 5px 2px 2px;
 	display: inline-block;
 	vertical-align: middle;
 }
@@ -864,8 +864,12 @@
 }
 @media screen and (max-width: 711px) {
 	.product {
-		padding: 0 20px 164px 20px;
-  }
+		padding: 0 0 164px 0;
+	}
+	.product__info-title-for-mobile,
+	.product__visualization {
+		padding-left: 20px;
+	}
 	.product__info-specifications {
 		width: 335px;
 	}
@@ -1138,6 +1142,9 @@
 	}
 	.product__preview-container {
 		max-width: 78px;
+	}
+	.product__info-custom-btn:hover {
+		background: rgb(224, 236, 240);
 	}
 }
 @media screen and (max-width: 380px) {
