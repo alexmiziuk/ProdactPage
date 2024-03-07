@@ -846,6 +846,9 @@
 	.container {
 		max-width: 704px;
 	}
+	.product__btn-full-screen {
+		right: 69px;
+	}
 	.product__info-title {
 		display: none;
 	}
@@ -1023,6 +1026,9 @@
 	}
 	.product__info-options-wrapper-visibly {
 		display: flex;
+	}
+	.product__info-details-main-request {
+		margin-bottom: 20px;
 	}
 }
 @media screen and (max-width: 660px) {
