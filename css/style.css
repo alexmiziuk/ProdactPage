@@ -437,22 +437,12 @@
 }
 .product__info-options-box {
 	position: relative;
-	background: linear-gradient(
-		to right,
-		rgb(214, 225, 229) 0px,
-		rgb(214, 225, 229) 84px,
-		transparent 84px,
-		transparent 116px,
-		rgb(214, 225, 229) 116px,
-		rgb(214, 225, 229) 200px,
-		transparent 200px,
-		transparent 232px,
-		rgb(214, 225, 229) 232px
-	);
+	background: rgb(224, 236, 240);
 	display: flex;
 	justify-content: space-between;
 	padding: 12px 12px;
 	align-items: center;
+	border-radius: 8px;
 }
 .product__info-options-checkbox {
 	position: relative;
@@ -1067,7 +1057,7 @@
 		display: none;
 	}
 	.product__info-options-wrapper-visibly {
-		display: block;
+		display: flex;
 	}
 }
 @media screen and (max-width: 630px) {
