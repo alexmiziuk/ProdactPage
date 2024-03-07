@@ -333,9 +333,6 @@
 .product__info-belt-width:hover {
 	background: rgb(63, 180, 215);
 }
-/* .product__info-belt-width--linear-gradient {
-	background: linear-gradient(to right, rgb(214, 225, 229) 50%, transparent 50%);
-} */
 .product__info-custom-btn {
 	font-family: "SFProText-Bold";
 	font-size: 14px;
@@ -344,13 +341,6 @@
 	padding: 11px 16px 11px 16px;
 	color: rgb(41, 46, 47);
 	text-transform: uppercase;
-	/* background: linear-gradient(
-		to right,
-		rgb(214, 225, 229) 20px,
-		white 20px,
-		white calc(90% - 45px),
-		rgb(214, 225, 229) calc(91% - 45px)
-	); */
 	background: rgb(224, 236, 240);
 	line-height: 0;
 	border-radius: 4px;
