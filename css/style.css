@@ -344,15 +344,16 @@
 	padding: 11px 16px 11px 16px;
 	color: rgb(41, 46, 47);
 	text-transform: uppercase;
-	background: linear-gradient(
+	/* background: linear-gradient(
 		to right,
 		rgb(214, 225, 229) 20px,
 		white 20px,
 		white calc(90% - 45px),
 		rgb(214, 225, 229) calc(91% - 45px)
-	);
+	); */
+	background: rgb(224, 236, 240);
 	line-height: 0;
-	border-radius: 8px;
+	border-radius: 4px;
 	border: none;
 	cursor: pointer;
 	transition:
@@ -387,11 +388,10 @@
 .product__info-bed-slider {
 	width: 64px;
 	overflow: hidden;
-	border-top: 1px solid rgb(205, 211, 211);
-	border-bottom: 1px solid rgb(205, 211, 211);
-	border-left: 2px solid rgb(205, 211, 211);
-	border-right: 2px solid rgb(214, 220, 221);
+	box-sizing: border-box;
+	border: 1px solid rgb(214, 220, 221);
 	border-radius: 8px;
+	background: rgb(242, 245, 245);
 }
 .product__info-pallets-slider-line {
 	display: flex;
