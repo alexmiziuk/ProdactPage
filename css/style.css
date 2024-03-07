@@ -964,6 +964,10 @@
 	.product__info-bed-wrapper {
 		width: 320px;
 	}
+	.product__info-custom-btn {
+		width: 104px;
+		height: 46px;
+	}
 	.product__info-bed-slider {
 		width: 192px;
 		background: rgb(242, 245, 245);
@@ -974,7 +978,6 @@
 	.product__info-bed-slide {
 		background: rgb(242, 245, 245);
 	}
-
 	.product__info-details-box {
 		box-sizing: border-box;
 		width: 183px;
