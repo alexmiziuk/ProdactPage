@@ -149,13 +149,11 @@
 .product__slider-button-prev-img,
 .product__info-pallets-prev-img,
 .product__info-bed-prev-img {
-	/* background-image: url(../assets/Icons/Icons-chevron-left.png); */
 	height: 14px;
 }
 .product__slider-button-next-img,
 .product__info-pallets-next-img,
 .product__info-bed-next-img {
-	/* background-image: url(../assets/Icons/Icons-chevron-right.png); */
 	height: 14px;
 }
 .product__slider-button-prev,
