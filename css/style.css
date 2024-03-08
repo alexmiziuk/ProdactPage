@@ -869,10 +869,8 @@
 }
 /* Применяем hover-эффект только для устройств с шириной экрана более 768px */
 @media (max-width: 768px) {
+	.product__info-custom-btn:hover,
 	.product__info-belt-width:hover {
-		background: rgb(20, 107, 135);
-	}
-	.product__info-custom-btn:hover {
 		background: rgb(20, 107, 135);
 	}
 }
@@ -948,7 +946,7 @@
 	}
 	.product__info-details {
 		width: 100%;
-		margin-top: 45px;
+		margin-top: 49px;
 		padding-bottom: 20px;
 		margin-left: 0;
 		padding-left: 0;
@@ -1070,9 +1068,9 @@
 	.product__slider-item {
 		bottom: 25px;
 	}
-	.product__info-details-block-one {
+	/* .product__info-details-block-one {
 		padding: 0;
-	}
+	} */
 	.product__preview-container {
 		margin: 16px auto 0 0%;
 	}
@@ -1205,5 +1203,6 @@
 	.product__info-details-block-second {
 		width: 100%;
 		margin: 0 auto;
+		padding-left: 20px;
 	}
 }
