@@ -973,7 +973,8 @@
 		width: 320px;
 	}
 	.product__preview-window {
-		width: 552px;
+		width: 579px;
+		padding-left: 11px;
 	}
 	.product__slider-button-prev--left {
 		display: none;
@@ -1075,7 +1076,8 @@
 		margin: 16px auto 0 0%;
 	}
 	.product__preview-window {
-		width: 511px;
+		width: 535px;
+		padding-left: 30px;
 	}
 }
 @media screen and (max-width: 580px) {
