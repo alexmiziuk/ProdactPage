@@ -1180,6 +1180,10 @@
 	.product__info-custom-btn:hover {
 		background: rgb(224, 236, 240);
 	}
+	.product__info-details-block-one,
+	.product__info-details-block-second {
+		width: 320px;
+	}
 }
 @media screen and (max-width: 380px) {
 	.product__preview {
@@ -1203,6 +1207,5 @@
 	.product__info-details-block-second {
 		width: 100%;
 		margin: 0 auto;
-		padding-left: 20px;
 	}
 }
