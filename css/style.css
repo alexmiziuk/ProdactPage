@@ -1049,6 +1049,9 @@
 	.product__preview-container {
 		margin: 16px auto 0 3%;
 	}
+	.product__preview-window {
+		padding-left: 0;
+	}
 }
 @media screen and (max-width: 630px) {
 	.product__slider-wrapper {
@@ -1077,7 +1080,7 @@
 	}
 	.product__preview-window {
 		width: 535px;
-		padding-left: 30px;
+		padding-left: 20px;
 	}
 }
 @media screen and (max-width: 580px) {
@@ -1095,7 +1098,7 @@
 	}
 	.product__preview-window {
 		width: 465px;
-		left: 630px;
+		padding-left: 5px;
 	}
 }
 @media screen and (max-width: 560px) {
@@ -1208,7 +1211,7 @@
 	}
 	.product__slider-wrapper {
 		margin-top: 3px;
-  }
+	}
 	.product__preview-container {
 		position: absolute;
 	}
