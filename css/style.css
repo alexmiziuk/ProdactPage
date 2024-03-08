@@ -131,9 +131,6 @@
 	overflow: hidden;
 	width: 652px;
 	height: 434px;
-	border: 1px solid rgb(236, 242, 243);
-	border-radius: 8px;
-	box-sizing: border-box;
 }
 .product__slider-line {
 	display: flex;
@@ -1177,7 +1174,7 @@
 		width: 80px;
 	}
 	.product__preview-window {
-		width: 360px;
+		width: 320px;
 	}
 	.product__preview-container {
 		margin: 21px auto 0 0;
