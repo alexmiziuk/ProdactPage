@@ -1085,9 +1085,7 @@
 		height: 332px;
 	}
 	.product__slider-window {
-		height: 391px;
-	}
-	.product__slider-window {
+		height: 338px;
 		width: 500px;
 	}
 	.product__preview-container {
@@ -1096,7 +1094,8 @@
 		margin: 16px auto 0 7%;
 	}
 	.product__preview-window {
-		width: 470px;
+		width: 465px;
+		left: 630px;
 	}
 }
 @media screen and (max-width: 560px) {
@@ -1160,6 +1159,9 @@
 	}
 	.product__visualization {
 		padding-left: 0;
+	}
+	.product__preview-window {
+		padding-left: 20px;
 	}
 	.product__slider-wrapper {
 		height: 232px;
