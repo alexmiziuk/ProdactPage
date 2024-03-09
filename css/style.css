@@ -374,6 +374,7 @@
 }
 .product__info-custom-btn:hover {
 	background: rgb(63, 180, 215);
+	color: white;
 }
 .product__info-belt-width--active {
 	background: rgb(20, 107, 135);
