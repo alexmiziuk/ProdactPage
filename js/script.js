@@ -307,7 +307,6 @@ document.addEventListener("DOMContentLoaded", function () {
 	}
 	setupBedSlider();
 
-
 	// counter
 
 	function setupCounter(counterElement, addButton, subtractButton) {
@@ -344,8 +343,9 @@ document.addEventListener("DOMContentLoaded", function () {
 	}
 
 	// Calling a function to enable an event handler
-	
+
 	toggleOptionsVisibility();
+	
 	const checkbox = document.querySelector('.product__info-options-checkbox input[type="checkbox"]');
 	checkbox.addEventListener('change', function () {
 		// Update pseudo-element styles depending on the checkbox state
@@ -373,5 +373,3 @@ document.addEventListener("DOMContentLoaded", function () {
 		});
 	});
 });
-
-

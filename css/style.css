@@ -1126,6 +1126,9 @@
 	}
 }
 @media screen and (max-width: 480px) {
+	.product__info-roller-text--centered-relative {
+		left: 190px;
+  }
 	.product__slider-wrapper {
 		height: 207px;
 	}
@@ -1152,6 +1155,10 @@
 	}
 }
 @media screen and (max-width: 436px) {
+	.product__info-roller-text--centered-relative {
+		left: 170px;
+		padding: 10px;
+  }
 	.nav {
 		padding: 34px 20px 0 20px;
 	}
@@ -1204,6 +1211,10 @@
 	}
 }
 @media screen and (max-width: 380px) {
+	.product__info-roller-text--centered-relative {
+		left: 161px;
+		padding: 10px;
+  }
 	.product__preview {
 		height: 104px;
 	}
