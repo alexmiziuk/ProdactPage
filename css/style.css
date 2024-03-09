@@ -217,7 +217,7 @@
 	height: 72px;
 	margin: 0 auto;
 	border-radius: 8px;
-	border: solid 1px #ecf1f4;;
+	border: solid 1px #ecf1f4;
 	box-sizing: border-box;
 }
 .product__slider-button-prev--left {
@@ -371,10 +371,6 @@
 	transition:
 		background 0.3s,
 		color 0.3s;
-}
-.product__info-custom-btn:hover {
-	background: rgb(63, 180, 215);
-	color: white;
 }
 .product__info-belt-width--active {
 	background: rgb(20, 107, 135);
@@ -877,9 +873,8 @@
 		justify-content: center;
 	}
 }
-/* Применяем hover-эффект только для устройств с шириной экрана более 768px */
+/* Apply hover effect only for devices with screen width greater than 768px*/
 @media (max-width: 768px) {
-	.product__info-custom-btn:hover,
 	.product__info-belt-width:hover {
 		background: rgb(20, 107, 135);
 	}
@@ -1162,7 +1157,6 @@
 	}
 	.nav__breadcrumb {
 		margin: 0;
-
 	}
 	.product__info-title-for-mobile {
 		text-align: left;
