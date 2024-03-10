@@ -128,15 +128,15 @@ document.addEventListener("DOMContentLoaded", function () {
 		if (!isDragging) return;
 		currentX = event.touches[0].clientX;
 		const diff = startX - currentX;
-
 		const widthValue = widthPreview; // Use the slider preview width
+
 		if (Math.abs(diff) > 20) {
 			/* event.preventDefault(); */
-			const translate = -countPreview * widthValue + diff; // Use countPreview for the preview slider
+			const translate = -countPreview * widthValue - diff; // Use countPreview for the preview slider
 			sliderLinePreview.style.transition = 'none'; // Disable animation for slider previews
 			sliderLinePreview.style.transform = `translate(${translate}px)`;
 
-			const translateMain = -count * width + diff; // Use count for the main slider
+			const translateMain = -count * width - diff; // Use count for the main slider
 			sliderLine.style.transition = 'none'; // Disable animation for the main slider
 			sliderLine.style.transform = `translate(${translateMain}px)`;
 		}
@@ -151,11 +151,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
 		if (Math.abs(diff) > widthValue / 3) {
 			if (diff > 0) {
-				count--;
-				countPreview--;
-			} else {
 				count++;
 				countPreview++;
+			} else {
+				count--;
+				countPreview--;
 			}
 			if (count < 0) {
 				count = 4;
@@ -345,7 +345,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	// Calling a function to enable an event handler
 
 	toggleOptionsVisibility();
-	
+
 	const checkbox = document.querySelector('.product__info-options-checkbox input[type="checkbox"]');
 	checkbox.addEventListener('change', function () {
 		// Update pseudo-element styles depending on the checkbox state
